@@ -1,0 +1,23 @@
+@for $i from 1 through 5 {
+    .m-t-#{$i * 10} {
+     margin-top: 10px * $i;
+    }
+}
+    
+@for $i from 1 through 5 {
+    .m-b-#{$i * 10} {
+     margin-bottom: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+    .p-t-#{$i * 10} {
+     padding-top: 10px * $i;
+    }
+}
+
+@for $i from 1 through 5 {
+    .p-b-#{$i * 10} {
+     padding-bottom: 10px * $i;
+    }
+}
