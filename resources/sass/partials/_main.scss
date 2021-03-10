@@ -1,0 +1,11 @@
+main{
+    width: $widthAll;
+    @include container;
+    .box-home{
+        width: $widthAll;
+        height: $boxHomerHeight;
+        background-image: url(../../img/molisana-home.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+}

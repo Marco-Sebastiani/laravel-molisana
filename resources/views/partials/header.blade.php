@@ -1,4 +1,4 @@
-<header>
+<header class="p-20">
     <div class="container">
         <div id="logo">
             <img src=" {{asset('img/logo.png')}} " alt="">

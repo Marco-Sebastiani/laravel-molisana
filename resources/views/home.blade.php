@@ -4,5 +4,9 @@
 
 
 @section('content')
-    
+    <div class="container">
+        <div class="box-home">
+            
+        </div>
+    </div>
 @endsection
