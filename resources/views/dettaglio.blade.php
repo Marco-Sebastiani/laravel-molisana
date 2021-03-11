@@ -2,10 +2,6 @@
 
 @section('title', $prodotto['titolo'] . 'pasta Molisana')
 
-@section('css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-@endsection
-
 @section('content')
     <div class="container">
         <div class="box-details">
@@ -20,7 +16,7 @@
                 <p>{!!$prodotto['descrizione']!!}</p>
             </div>
 
-            <div class="box-icon">
+            <div class="box-icon-general p-20">
                 <div class="box-icon">
                     <i class="fas fa-info"></i>
                     <p>{!!$prodotto['tipo']!!}</p>

@@ -1,13 +1,7 @@
 header{
     width: $widthAll;
-    .container{
-        max-width: $widthContain;
-        height: $heightAll;
-        margin: 0 auto;
-    }
     @include flex;
     ul{
-        list-style: none;
         @include flex;
         li{
             margin-top: 10px;
@@ -17,6 +11,9 @@ header{
                 padding: 15px;
                 &:hover{
                     background-color: $menuColorHover
+                }
+                &.active{
+                    background-color: $menuColorHover;
                 }
             }
         }

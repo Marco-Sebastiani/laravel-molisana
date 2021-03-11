@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-family: "Lato", sans-serif;
@@ -15,9 +19,27 @@ body {
   margin: 0 auto;
 }
 
+ul {
+  list-style: none;
+}
+
 .title-product {
+  color: #002d75;
+  font-style: italic;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.377);
+}
+.scroll a {
+  color: #000;
 }
 
 header {
@@ -28,13 +50,7 @@ header {
   flex-wrap: nowrap;
   flex-direction: row;
 }
-header .container {
-  max-width: 1170px;
-  height: 100%;
-  margin: 0 auto;
-}
 header ul {
-  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +66,9 @@ header ul li a {
   padding: 15px;
 }
 header ul li a:hover {
+  background-color: #b3e5fc;
+}
+header ul li a.active {
   background-color: #b3e5fc;
 }
 
@@ -79,15 +98,24 @@ main {
   text-align: justify;
   background-color: #efefefa6;
 }
-.box-details .box-icon {
+.box-details .box-icon-general {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
+  text-transform: capitalize;
 }
-.box-details .box-icon i {
+.box-details .box-icon-general .box-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.box-details .box-icon-general i {
   margin-right: 10px;
+  display: inline;
 }
 
 .box-news {
@@ -130,6 +158,7 @@ main {
 }
 .box-cards .box-item .box-layer a {
   text-decoration: none;
+  color: #002d75;
 }
 .box-cards .box-item:hover .box-layer {
   opacity: 1;
@@ -137,10 +166,38 @@ main {
 
 footer {
   width: 100%;
-  height: 200px;
+  height: 300px;
   background-image: url("../images/footer-montagne-bottom.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
+}
+footer .box-info-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+footer .box-info-footer .box-right {
+  width: 50%;
+  text-align: center;
+}
+footer .box-info-footer .box-left {
+  width: 50%;
+  padding: 0 15%;
+}
+footer .box-info-footer .box-left ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 1.6em;
+}
+footer .box-info-footer .box-left ul a {
+  color: #000;
 }
 
 .m-t-10 {

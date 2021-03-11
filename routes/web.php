@@ -43,11 +43,21 @@ Route::get('/prodotti', function () {
     return view('/products', $data);
 })->name('pagina-prodotti');
 
-Route::get('/dettaglio/{paperino}', function ($id) {
+Route::get('/dettaglio/{id}', function ($id) {
+
     $pasta = config('db-pasta');
-    $prodotto= $pasta[$id];
-    $data= ['prodotto' => $prodotto];
-    return view('dettaglio', $data);
+    if(is_numeric($id) && $id >= 0 && $id < count($pasta)){
+        $prodotto= $pasta[$id];
+
+        $data= ['prodotto' => $prodotto];
+    
+        return view('dettaglio', $data);
+    } else{
+        abort('404');
+    }
+
+
+
 })->name('pagina-dettagli');
 
 Route::get('/notizie', function () {

@@ -13,7 +13,7 @@
                     <div class="box-item">
                         <img src="{{$item['src']}}" alt="{{$item['titolo']}}">
                         <div class="box-layer">
-                            <a href="{{route('pagina-dettagli', ['paperino' => $Key])}}">{{$item['titolo']}} - {{$item['tipo']}}</a>
+                            <a href="{{route('pagina-dettagli', ['id' => $Key])}}">{{$item['titolo']}} - {{$item['tipo']}}</a>
                         </div>
                     </div>
                 @endforeach

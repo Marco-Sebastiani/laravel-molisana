@@ -4,4 +4,28 @@ footer{
     background-image: url('../images/footer-montagne-bottom.jpg');
     background-position: bottom;
     background-repeat: no-repeat;
+
+    .box-info-footer{
+        @include flex($justify: space-around);
+        width: $widthAll;
+        height: $heightAll;
+
+        .box-right{
+            width: 50%;
+            text-align: center;
+        }
+
+        .box-left{
+            width: 50%;
+            padding: 0 15%;
+
+            ul{
+                @include flex($justify: space-around);
+                font-size: 1.6em;
+                a{
+                    color: #000;
+                }
+            }
+        }
+    }
 }

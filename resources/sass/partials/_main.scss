@@ -1,74 +1,80 @@
 main{
     width: $widthAll;
 }
-    .box-home{
-        width: $widthAll;
-        height: $boxHomerHeight;
-        background-image: url('../images/molisana-home.jpg');
-        background-position: center;
-        background-size: cover;
-    }
+
+.box-home{
+    width: $widthAll;
+    height: $boxHomerHeight;
+    background-image: url('../images/molisana-home.jpg');
+    background-position: center;
+    background-size: cover;
+}
     
-    .box-details{
-        width: $widthAll;
-        h1{
-            margin-bottom: 10px;
-        }
-        img{
-            max-width: $widthAll;
-            display: block;
-        }
-        .box-info-text{
-            text-align: justify;
-            background-color: #efefefa6;
-        }
+.box-details{
+    width: $widthAll;
+    h1{
+        margin-bottom: 10px;
+    }
+    img{
+        max-width: $widthAll;
+        display: block;
+    }
+    .box-info-text{
+        text-align: justify;
+        background-color: #efefefa6;
+    }
 
+    .box-icon-general{
+        @include flex(space-around);
+        text-transform: capitalize;
         .box-icon{
-            @include flex(space-around);
-            i {
-                margin-right: 10px;
-            }
+            @include flex;
+        }
+        i {
+            margin-right: 10px;
+            display: inline;
         }
     }
+}
 
-    .box-news{
-        width: $widthAll;
-        height: $boxHomerHeight;
-        background-image: url('../images/news.jpg');
-        background-position: center;
-        background-size: cover;
-    }
+.box-news{
+    width: $widthAll;
+    height: $boxHomerHeight;
+    background-image: url('../images/news.jpg');
+    background-position: center;
+    background-size: cover;
+}
 
-    .box-cards{
-        width: $widthAll;
-        @include flex($justify:flex-start ,$wrap: wrap);
+.box-cards{
+    width: $widthAll;
+    @include flex($justify:flex-start ,$wrap: wrap);
 
-        .box-item{
-            width: calc(100% / 3);
-            position: relative;
-            img{
-                width: 100%;
-            }
-
-            .box-layer{
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: #bedae5bd;
-                width: 100%;
-                height: 98%;
-                @include flex;
-                opacity: 0;
-                transition: all 0.8s;
-                a{
-                    text-decoration: none;
-                }
-            }
-            
-            &:hover .box-layer{
-                opacity: 1;
-            }
+    .box-item{
+        width: calc(100% / 3);
+        position: relative;
+        img{
+            width: 100%;
         }
 
+        .box-layer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #bedae5bd;
+            width: 100%;
+            height: 98%;
+            @include flex;
+            opacity: 0;
+            transition: all 0.8s;
+            a{
+                text-decoration: none;
+                color: $menuColor;
+            }
+        }
+        
+        &:hover .box-layer{
+            opacity: 1;
+        }
     }
+}
 
