@@ -9,6 +9,14 @@ main{
         background-size: cover;
     }
 
+    .box-news{
+        width: $widthAll;
+        height: $boxHomerHeight;
+        background-image: url(../../img/news.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
     .box-cards{
         width: $widthAll;
         @include flex($wrap: wrap);
