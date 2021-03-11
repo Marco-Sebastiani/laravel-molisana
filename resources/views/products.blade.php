@@ -5,17 +5,21 @@
 
 @section('content')
     <div class="container">
-        <div class="box-cards">
-            @foreach ($formati as $formato)
-                <div class="box-item">
-                    <img src="{{$formato['src']}}" alt="{{$formato['titolo']}}">
-                    <div class="box-layer">
-                        <a href="">{{$formato['titolo']}} - {{$formato['tipo']}}</a>
+
+        @foreach ($formati as $K => $formato)
+            <h2 class="title-product">{{$K}}</h2>
+            <div class="box-cards">
+                @foreach ($formato as $Key =>$item)
+                    <div class="box-item">
+                        <img src="{{$item['src']}}" alt="{{$item['titolo']}}">
+                        <div class="box-layer">
+                            <a href="{{route('pagina-dettagli', ['paperino' => $Key])}}">{{$item['titolo']}} - {{$item['tipo']}}</a>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+            </div>
+        @endforeach
 
-            @endforeach
 
-        </div>
     </div>
 @endsection

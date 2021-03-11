@@ -1,25 +1,47 @@
 main{
     width: $widthAll;
-    @include container;
+}
     .box-home{
         width: $widthAll;
         height: $boxHomerHeight;
-        background-image: url(../../img/molisana-home.jpg);
+        background-image: url('../images/molisana-home.jpg');
         background-position: center;
         background-size: cover;
+    }
+    
+    .box-details{
+        width: $widthAll;
+        h1{
+            margin-bottom: 10px;
+        }
+        img{
+            max-width: $widthAll;
+            display: block;
+        }
+        .box-info-text{
+            text-align: justify;
+            background-color: #efefefa6;
+        }
+
+        .box-icon{
+            @include flex(space-around);
+            i {
+                margin-right: 10px;
+            }
+        }
     }
 
     .box-news{
         width: $widthAll;
         height: $boxHomerHeight;
-        background-image: url(../../img/news.jpg);
+        background-image: url('../images/news.jpg');
         background-position: center;
         background-size: cover;
     }
 
     .box-cards{
         width: $widthAll;
-        @include flex($wrap: wrap);
+        @include flex($justify:flex-start ,$wrap: wrap);
 
         .box-item{
             width: calc(100% / 3);
@@ -49,4 +71,4 @@ main{
         }
 
     }
-}
+

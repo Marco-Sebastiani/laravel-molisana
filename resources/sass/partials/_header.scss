@@ -1,6 +1,10 @@
 header{
     width: $widthAll;
-    @include container;
+    .container{
+        max-width: $widthContain;
+        height: $heightAll;
+        margin: 0 auto;
+    }
     @include flex;
     ul{
         list-style: none;

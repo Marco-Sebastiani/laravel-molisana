@@ -8,3 +8,14 @@ body{
     font-size: 16px;
     font-family: 'Lato', sans-serif;
 }
+
+.container{
+    max-width: $widthContain;
+    height: $heightAll;
+    margin: 0 auto;
+}
+
+.title-product{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
